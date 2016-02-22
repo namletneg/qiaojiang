@@ -80,4 +80,6 @@ td, th { padding: 0; }
 
 body { line-height: 1.2em; font-family: "microsoft yahei"; font-size: 14px; color: #333; }
 
+@media screen and (max-width: 800px) { .header { background-color: #f27c01; } }
+
 /*# sourceMappingURL=main.css.map */
