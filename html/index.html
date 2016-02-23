@@ -2,6 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="巧匠设计">
     <title>巧匠设计</title>
     <link rel="stylesheet" href="../static/css/main.css"/>
 </head>
@@ -9,7 +13,7 @@
 <div class="header">
     <div class="container">
         <div class="collapse r">
-            <a class="touch" href="javascript:;">&Nu;</a>
+            <a class="touch" href="javascript:;"></a>
             <ul class="nav">
                 <li class="active"><a href="/">首页</a></li>
                 <li><a href="/">案例</a></li>
@@ -17,13 +21,16 @@
                 <li><a href="/">关于</a></li>
             </ul>
         </div>
-        <a class="logo l">巧匠设计</a>
+        <a class="logo l" href="/" title="巧匠设计">巧匠设计</a>
     </div>
 </div>
 <div class="main">
     <div class="carousel">
         <div class="box"></div>
-        <div class="dot"></div>
+        <div class="dot">
+            <a class="active" href="javascript:;"></a>
+            <a href="javascript:;"></a>
+        </div>
     </div>
     <div class="floor-1">
         <div class="container">
@@ -42,7 +49,7 @@
                             <p>科技类网站设计</p>
                         </li>
                         <li>
-                            <i class="icon-server-1"></i>
+                            <i class="icon-server-2"></i>
                             <h2>移动产品设计</h2>
                             <p>ios/界面设计</p>
                             <p>html5设计开发</p>
@@ -50,7 +57,7 @@
                             <p>移动网站设计开发</p>
                         </li>
                         <li>
-                            <i class="icon-server-1"></i>
+                            <i class="icon-server-3"></i>
                             <h2>运营与推广</h2>
                             <p>旅游项目运营与推广</p>
                             <p>保险项目运营与推广</p>
@@ -58,7 +65,7 @@
                             <p>金融项目运营与推广</p>
                         </li>
                         <li>
-                            <i class="icon-server-1"></i>
+                            <i class="icon-server-4"></i>
                             <h2>产品UI设计</h2>
                             <p>图标设计</p>
                             <p>web网页设计</p>
@@ -76,7 +83,7 @@
                 <div class="hd">
                     <h1>案例展示</h1>
                     <p>我们的价值与宗旨是为用户和客户打造最精巧的设计，用设计提升产品和企业价值。</p>
-                    <p class="text-center"><a href="#" class="btn">查看全部案例</a></p>
+                    <p><a href="#" class="btn">查看全部案例</a></p>
                 </div>
                 <div class="bd">
                     <ul class="case-list">
@@ -93,11 +100,9 @@
     </div>
     <div class="floor-3">
         <div class="container">
-            <div class="text-center">
-                <i class="icon-logo"></i>
-                <p>巧匠设计成立于2016年，我们是一家专注用户体验设计与互联网品牌建设的设计公司设计服务范围包括：交互原型设计、产品视觉设计、网站设计与开发建设、移动及软件产品界面设计、图标设计、品牌及平面设计等。我们的价值与宗旨是为用户和客户打造最精巧的设计，用设计提升产品和企业价值。</p>
-                <a href="#" class="btn">了解更多</a>
-            </div>
+            <i class="icon-logo"></i>
+            <p>巧匠设计成立于2016年，我们是一家专注用户体验设计与互联网品牌建设的设计公司设计服务范围包括：交互原型设计、产品视觉设计、网站设计与开发建设、移动及软件产品界面设计、图标设计、品牌及平面设计等。我们的价值与宗旨是为用户和客户打造最精巧的设计，用设计提升产品和企业价值。</p>
+            <a href="#" class="btn">了解更多</a>
         </div>
     </div>
     <div class="floor-4">
@@ -109,11 +114,11 @@
                 <div class="bd">
                     <ul class="step-list">
                         <li><i class="icon-step-1"></i><p>1、前期沟通</p></li>
-                        <li><i class="icon-step-1"></i><p>2、UI规划</p></li>
-                        <li><i class="icon-step-1"></i><p>3、视觉设计</p></li>
-                        <li><i class="icon-step-1"></i><p>4、前端/程序开发</p></li>
-                        <li><i class="icon-step-1"></i><p>5、测试</p></li>
-                        <li><i class="icon-step-1"></i><p>6、完成交付</p></li>
+                        <li><i class="icon-step-2"></i><p>2、UI规划</p></li>
+                        <li><i class="icon-step-3"></i><p>3、视觉设计</p></li>
+                        <li><i class="icon-step-4"></i><p>4、前端/程序开发</p></li>
+                        <li><i class="icon-step-5"></i><p>5、测试</p></li>
+                        <li><i class="icon-step-6"></i><p>6、完成交付</p></li>
                     </ul>
                 </div>
             </div>
@@ -124,13 +129,21 @@
             <div class="whole">
                 <div class="hd">
                     <h1>我们的团队</h1>
-                    <p>我们是追求品质与力求不断超越自己的团队，每一位成员也是亲密的伙伴，与公司一起成长与发展。我们尊重每次合作的机会与挑战，不断精进，力求完美。团队<br/>秉承专注、专业的设计服务思维，让客户通过设计发挥产品的最大价值，并发掘无限的可能。热爱设计并坚信设计的力量让我们不断前进…</p>
+                    <p>我们是追求品质与力求不断超越自己的团队，每一位成员也是亲密的伙伴，与公司一起成长与发展。我们尊重每次合作的机会与挑战，不断精进，力求完美。团队秉承专注、专业的设计服务思维，让客户通过设计发挥产品的最大价值，并发掘无限的可能。热爱设计并坚信设计的力量让我们不断前进…</p>
                 </div>
                 <div class="bd">
                     <ul class="team-list">
-                        <li><img src="../static/images/team-1.jpg"/><img src="../static/images/team-2.jpg"/></li>
-                        <li><img src="../static/images/team-3.jpg"/></li>
-                        <li><img src="../static/images/team-4.jpg"/><img src="../static/images/team-5.jpg"/></li>
+                        <li>
+                            <a href="javascript:;"><img src="../static/images/team-1.jpg"/></a>
+                            <a href="javascript:;"><img src="../static/images/team-2.jpg"/></a>
+                        </li>
+                        <li class="center">
+                            <a href="javascript:;"><img src="../static/images/team-3.jpg"/></a>
+                        </li>
+                        <li>
+                            <a href="javascript:;"><img src="../static/images/team-4.jpg"/></a>
+                            <a href="javascript:;"><img src="../static/images/team-5.jpg"/></a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -151,10 +164,12 @@
                     <p>Q Q：83879535</p>
                 </div>
             </div>
-            <div class="l">
-                <div class="qrcode l"></div>
-                <p class="l">巧匠微信公众号</p>
-                <div class="l"><img src="../static/images/logo.png"/></div>
+            <div class="ml30 l">
+                <div class="qrcode l"><img src="../static/images/qrcode.png"/></div>
+                <div class="ml20 l">
+                    <p>巧匠微信公众号</p>
+                    <img src="../static/images/logo.png"/>
+                </div>
             </div>
         </div>
         <div class="bottom">Copyright © 2015 qiaojiangui 琼ICP备05002293号</div>
