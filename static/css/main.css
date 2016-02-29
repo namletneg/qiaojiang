@@ -307,6 +307,7 @@ h1, h2, h3, h4, h5, h6, p { margin: 0; font-weight: normal; }
 .footer .top p { padding-right: 40px; padding-bottom: 20px; color: #333; -webkit-appearance: none; }
 .footer .bottom { margin-top: 40px; font-size: 12px; text-align: center; }
 .footer .qrcode { padding-bottom: 10px; width: 120px; height: 120px; }
+.footer .qrcode img { width: 120px; }
 @media screen and (max-width: 800px) { .footer .top { padding-left: 0; text-align: center; }
   .footer .top p { padding-right: 0; }
   .footer div.l { margin: 0; width: 100%; } }
