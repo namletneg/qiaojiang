@@ -175,7 +175,7 @@ h1, h2, h3, h4, h5, h6, p { margin: 0; font-weight: normal; }
 .text-center { text-align: center; }
 
 .container { margin: 0 auto; width: 1170px; }
-@media screen and (max-width: 800px) { .container { width: 100%; } }
+@media screen and (max-width: 1170px) { .container { width: 100%; } }
 
 .icon-server-1, .icon-server-2, .icon-server-3, .icon-server-4 { width: 85px; height: 75px; }
 
@@ -205,36 +205,45 @@ h1, h2, h3, h4, h5, h6, p { margin: 0; font-weight: normal; }
 .header { *zoom: 1; padding: 15px 0; }
 .header:after, .header:before { content: ""; display: table; }
 .header:after { clear: both; overflow: hidden; }
-.header .logo { text-indent: -999em; overflow: hidden; color: transparent; display: block; width: 171px; height: 45px; background: url("../images/logo.png") no-repeat; }
-@media screen and (max-width: 800px) { .header { position: relative; padding: 10px; } }
+.header .logo { display: block; width: 171px; height: 45px; }
+.header .logo img { width: 100%; }
+@media screen and (max-width: 800px) { .header { position: relative; padding: 10px; }
+  .header .logo { width: 150px; height: 40px; } }
 
+.collapse { position: relative; }
 .collapse .touch { display: none; }
+.collapse .timber { position: absolute; left: 60px; bottom: -8px; width: 32px; height: 6px; border-radius: 3px; transition: left .5s ease-out; background-color: #70b94c; }
 @media screen and (max-width: 800px) { .collapse { margin-top: 15px; }
   .collapse .touch { position: relative; display: block; border: #555 solid; border-width: 2px 0; width: 22px; height: 10px; }
-  .collapse .touch:after { position: absolute; top: 4px; width: 100%; height: 2px; content: ''; background-color: #555; } }
+  .collapse .touch:after { position: absolute; top: 4px; width: 100%; height: 2px; content: ''; background-color: #555; }
+  .collapse .timber { display: none; } }
 
 .nav { *zoom: 1; margin-top: 14px; }
 .nav:after, .nav:before { content: ""; display: table; }
 .nav:after { clear: both; overflow: hidden; }
-.nav li { float: left; padding-left: 60px; }
+.nav li { float: left; margin-left: 60px; }
 .nav li a { position: relative; font-size: 16px; color: #000; }
+.nav li a:hover { color: #70b94c; }
 .nav li.active a { color: #70b94c; }
-.nav li.active a:after { position: absolute; left: 0; right: 0; bottom: -7px; content: ''; height: 6px; border-radius: 3px; background-color: #70b94c; }
-@media screen and (max-width: 800px) { .nav { display: none; position: absolute; top: 65px; left: 0; right: 0; z-index: 100; margin-top: 0; border-top: #eee solid 1px; background-color: #fff; }
-  .nav li { width: 100%; padding: 10px 0; }
+@media screen and (max-width: 800px) { .nav { display: none; position: absolute; top: 35px; right: -10px; z-index: 100; margin-top: 0; border-top: #eee solid 1px; background-color: rgba(255, 255, 255, 0.8); }
+  .nav li { width: 100%; margin-left: 0; padding: 10px 0; }
   .nav li a { display: block; text-align: center; }
   .nav li.active a { color: #70b94c; }
-  .nav li.active a:after { display: none; } }
+  .nav li.active a:after { position: absolute; content: ''; bottom: -7px; left: 50%; margin-left: -3px; border-radius: 50%; width: 6px; height: 6px; background-color: #70b94c; } }
 
-.carousel { position: relative; width: 100%; }
-.carousel .box { width: 100%; height: 734px; background: url("../images/banner_bg.jpg") no-repeat center; }
+.carousel { position: relative; width: 100%; height: 734px; }
+.carousel .item { position: absolute; left: 0; display: none; width: 100%; height: 734px; }
+.carousel .item.active { display: block; }
+.carousel .banner-1 { background: url("../images/banner-1_bg.jpg") no-repeat center; }
+.carousel .banner-2 { background: url("../images/banner-2_bg.jpg") no-repeat center; }
 .carousel .dot { *zoom: 1; position: absolute; z-index: 2; left: 50%; bottom: 20px; margin-left: -20px; }
 .carousel .dot:after, .carousel .dot:before { content: ""; display: table; }
 .carousel .dot:after { clear: both; overflow: hidden; }
 .carousel .dot a { float: left; display: block; margin: 0 5px; border-radius: 50%; width: 10px; height: 10px; background-color: #fff; }
 .carousel .dot a.active { background-color: #82d049; }
-@media screen and (max-width: 800px) { .carousel .box { height: 310px; background-size: 150%; } }
-@media screen and (max-width: 600px) { .carousel .box { height: 310px; background-size: 340%; } }
+@media screen and (max-width: 800px) { .carousel { height: 310px; }
+  .carousel .item { height: 310px; background-size: 150%; } }
+@media screen and (max-width: 600px) { .carousel .item { background-size: 340%; } }
 
 .whole .hd { text-align: center; }
 .whole .hd h1 { padding: 25px 0; font-size: 28px; line-height: 1.5em; }
@@ -257,8 +266,9 @@ h1, h2, h3, h4, h5, h6, p { margin: 0; font-weight: normal; }
 .case-list:after, .case-list:before { content: ""; display: table; }
 .case-list:after { clear: both; overflow: hidden; }
 .case-list li { float: left; padding-bottom: 18px; width: 33.3%; text-align: center; }
-.case-list li a { display: inline-block; }
-.case-list li a img { width: 100%; vertical-align: middle; }
+.case-list li a { display: inline-block; overflow: hidden; }
+.case-list li a img { width: 100%; vertical-align: middle; transition: transform .2s ease-out; }
+.case-list li a:hover img { transform: scale(1.1); }
 @media screen and (max-width: 800px) { .case-list li { width: 100%; padding-bottom: 4px; } }
 
 .floor-3 { height: 500px; text-align: center; background: url("../images/floor-3_bg.jpg") no-repeat center; }
@@ -294,7 +304,7 @@ h1, h2, h3, h4, h5, h6, p { margin: 0; font-weight: normal; }
 .footer .top:after, .footer .top:before { content: ""; display: table; }
 .footer .top:after { clear: both; overflow: hidden; }
 .footer .top h2 { padding-bottom: 20px; font-size: 20px; color: #70b94c; }
-.footer .top p { padding-right: 40px; padding-bottom: 20px; }
+.footer .top p { padding-right: 40px; padding-bottom: 20px; color: #333; -webkit-appearance: none; }
 .footer .bottom { margin-top: 40px; font-size: 12px; text-align: center; }
 .footer .qrcode { padding-bottom: 10px; width: 120px; height: 120px; }
 @media screen and (max-width: 800px) { .footer .top { padding-left: 0; text-align: center; }
