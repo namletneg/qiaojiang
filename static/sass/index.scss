@@ -253,6 +253,13 @@
             color: #999;
         }
     }
+    &.bt{
+        margin-top: 40px;
+        border-top: #e7e7e7 solid 1px;
+        @media screen and (max-width: 800px) {
+            margin: 0 15px;
+        }
+    }
 }
 .floor-1{
     padding: 20px 0 50px;
@@ -286,6 +293,9 @@
 .floor-2{
     @extend .floor-1;
     background-color: #f7f7f7;
+    &.white{
+        background-color: #fff;
+    }
 }
 .case-list{
     @include clearfix;
@@ -448,6 +458,51 @@
         div.l{
             margin: 0;
             width: 100%;
+        }
+    }
+}
+.solve-list{
+    @include clearfix;
+    margin-left: -150px;
+    li{
+        float: left;
+        margin-bottom: 40px;
+        width: 33.3%;
+        text-align: center;
+        a{
+            display: inline-block;
+            border-radius: 50%;
+            overflow: hidden;
+            img{
+                width: 100%;
+                vertical-align: middle;
+                transition: transform .2s ease-out;
+            }
+            &:hover{
+                img{
+                    transform: scale(1.1);
+                }
+            }
+        }
+        h2{
+            padding: 10px 0 5px;
+            font-size: 16px;
+        }
+        p{
+            font-size: 12px;
+            color: #999;
+        }
+    }
+    .shell{
+        padding-left: 150px;
+    }
+    @media screen and (max-width: 800px) {
+        li{
+            width: 100%;
+        }
+        .shell{
+            display: inline-block;
+            width: 280px;
         }
     }
 }

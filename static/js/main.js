@@ -1,6 +1,6 @@
 (function ($) {
     // 导航
-    $('.touch').on('touchstart', function () {
+    $('.touch').on('click', function () {
         $('.nav').width(window.innerWidth).toggle();
     });
 
